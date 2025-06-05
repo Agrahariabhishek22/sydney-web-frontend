@@ -14,7 +14,7 @@ const Card = ({ title, date_time, venue, price, link, image }) => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:5000/api/events/details', { email});
+      await axios.post('BASE_URL="https://sydney-web-backend.vercel.app/api/events/details', { email});
       setIsOpen(false);
       window.open(link, '_blank'); // Open event link in new tab
     } catch (err) {

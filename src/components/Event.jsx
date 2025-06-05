@@ -11,7 +11,7 @@ const Event = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/events/scrape");
+        const res = await fetch("https://sydney-web-backend.vercel.app/api/events/scrape");
         const data = await res.json();
         setEvents(data.data);
         setLoading(false);
@@ -26,7 +26,7 @@ const Event = () => {
 
   const fetchEmails = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/events/all");
+      const res = await axios.get("https://sydney-web-backend.vercel.app/api/events/all");
       setEmails(res.data);
       setShowEmails(true);
     } catch (err) {
